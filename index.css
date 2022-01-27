@@ -62,7 +62,7 @@ Syntax:
   justify-content: center;
   align-items: center;
 }
-
+ 
 .section {
   background-color: orange;
   /*display: flex;

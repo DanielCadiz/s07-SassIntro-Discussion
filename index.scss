@@ -72,7 +72,7 @@ Syntax:
 	@include container($bg-color: orange);
 	padding: math.div(100px, 960px) * 100%;
 }
-
+ 
 #contact {
 	@include container($bg-color: gray);
 }
