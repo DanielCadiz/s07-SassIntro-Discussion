@@ -1,0 +1,22 @@
+/*Partials allow seperate Sass files to be created and used simultaneously
+while seperating Sass code for easier maintenance of code*/
+
+/*_sample-partial-file-name*/
+
+/*Partial files are written with an underscore(_) before the name of the file
+and is a good practice to write multiple words by using hyphens(-) instead of spaces*/
+
+
+div {
+	p {
+		color: yellow;
+	}
+
+	ul {
+		background-color: gray;	
+	}
+
+	li {
+		list-style-type: none;
+	}
+}

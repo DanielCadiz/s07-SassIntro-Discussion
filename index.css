@@ -1,0 +1,94 @@
+/*Partials allow seperate Sass files to be created and used simultaneously
+while seperating Sass code for easier maintenance of code*/
+/*_sample-partial-file-name*/
+/*Partial files are written with an underscore(_) before the name of the file
+and is a good practice to write multiple words by using hyphens(-) instead of spaces*/
+div p {
+  color: yellow;
+}
+div ul {
+  background-color: gray;
+}
+div li {
+  list-style-type: none;
+}
+
+/*ctrl shift p > Install Package > Sass*/
+* {
+  font-family: "Courier New", monospace;
+  font-size: 20px;
+}
+
+/*Using variables*/
+p {
+  color: red;
+  font-size: 30px;
+}
+
+a {
+  color: blue;
+  font-size: 30px;
+}
+
+/*Nesting*/
+/*Allows us for better code readability*/
+/*div {
+	p {
+		color: yellow;
+	}
+
+	ul {
+		background-color: gray;	
+	}
+
+	li {
+		list-style-type: none;
+	}
+}*/
+/*Mixins
+Allows to create a group of CSS declarations that can be reused
+for styling our application
+
+Syntax:
+	@mixin mixin-name($parameter-name: ThemeName) {
+		property: value;
+		property: value;
+	}
+
+	@include mixin-name
+*/
+#contact, .section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  background-color: orange;
+  /*display: flex;
+  justify-content: center;
+  align-items: $alignItems;*/
+  padding: 10.4166666667%;
+}
+
+#contact {
+  background-color: gray;
+  /*display: flex;
+  justify-content: center;
+  align-items: $alignItems;*/
+}
+
+/*Extend/Inheritance
+Allows to share a set of CSS properties from one selector to another
+
+Syntax:
+	%inheritance-name {
+		property: value;
+	}
+
+	@extend %inheritance-name
+
+*/
+/*Operators*/
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,96 @@
+/*ctrl shift p > Install Package > Sass*/
+
+@use  'partials';
+@use 'sass:math';
+
+//variable names
+$global-font: 20px;
+$header-fonts: 30px;
+
+* {
+	font-family: "Courier New", monospace;
+	font-size: $global-font;
+}
+
+/*Using variables*/
+p {
+	color: red;
+	font-size: $header-fonts;
+}
+
+a {
+	color: blue;
+	font-size: $header-fonts;
+}
+
+/*Nesting*/
+/*Allows us for better code readability*/
+/*div {
+	p {
+		color: yellow;
+	}
+
+	ul {
+		background-color: gray;	
+	}
+
+	li {
+		list-style-type: none;
+	}
+}*/
+
+
+/*Mixins
+Allows to create a group of CSS declarations that can be reused
+for styling our application
+
+Syntax:
+	@mixin mixin-name($parameter-name: ThemeName) {
+		property: value;
+		property: value;
+	}
+
+	@include mixin-name
+*/
+
+%center-elements {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+@mixin container($bg-color: #343434, $alignItems: center) {
+	background-color: $bg-color;;
+	/*display: flex;
+	justify-content: center;
+	align-items: $alignItems;*/
+	@extend %center-elements
+}
+
+.section {
+	@include container($bg-color: orange);
+	padding: math.div(100px, 960px) * 100%;
+}
+
+#contact {
+	@include container($bg-color: gray);
+}
+
+/*Extend/Inheritance
+Allows to share a set of CSS properties from one selector to another
+
+Syntax:
+	%inheritance-name {
+		property: value;
+	}
+
+	@extend %inheritance-name
+
+*/
+
+/*Operators*/
+
+
+
+
